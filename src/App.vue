@@ -8,11 +8,18 @@
       </li>
     </ul>
 
+    <Variaveis/>
+    
   </div>
 </template>
 
 <script>
+import Variaveis from "./Variaveis.vue"
+
 export default {
+  components: {
+    Variaveis
+  },
 
   data() {
 
@@ -32,6 +39,7 @@ export default {
     }
   }
 }
+
 
 </script>
 

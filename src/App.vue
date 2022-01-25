@@ -26,19 +26,17 @@ export default {
     return {
 
       titulo: 'Alurapic', 
-      fotos: [
-        {
-          url: 'https://s2.glbimg.com/nvjFq8VRjyrpdQqaOeywz-5DFwY=/e.glbimg.com/og/ed/f/original/2021/08/27/captura_de_tela_2021-08-27_as_11.01.15.png' ,
-          titulo: 'cachorro'
-        },
-        {
-          url: 'https://s2.glbimg.com/nvjFq8VRjyrpdQqaOeywz-5DFwY=/e.glbimg.com/og/ed/f/original/2021/08/27/captura_de_tela_2021-08-27_as_11.01.15.png' ,
-          titulo: 'Cachorrão'
-        }
-      ]
+      fotos: []
     }
-  }
+  },
+  created( ) {
+    
+    this.$http.get('http://localhost:3000/v1/fotos')
+      .then(res => res.json())
+      .then(fotos => this.fotos = fotos, err => console.log(err));
+    }
 }
+
 
 
 </script>

@@ -9,16 +9,18 @@
     </ul>
 
     <Variaveis/>
-    
+    <Button/>
   </div>
 </template>
 
 <script>
 import Variaveis from "./Variaveis.vue"
+import \button from "./Button.vue"
 
 export default {
   components: {
-    Variaveis
+    Variaveis,
+    Button
   },
 
   data() {
